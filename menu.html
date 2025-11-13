@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #000000, #1a1a1a);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      padding: 60px 10%;
+      background: url("file/menu\ bg.jpg")no-repeat center/cover;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
+    .menu-section {
+      margin-bottom: 50px;
+    }
+    .menu-section h2 {
+      font-size: 28px;
+      color: #fff;
+      border-bottom: 2px solid white;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .item {
+      background: rgba(205, 203, 203, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .item:hover { transform: translateY(-8px); box-shadow: 0 0 15px white; }
+    .item h3 {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+    .item p {
+      color: #ccc;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Menu</h1>
+
+  <div class="menu-section">
+    <h2>Starters</h2>
+    <div class="menu-items">
+      <div class="item"><h3>Garlic Bread</h3><p>₹120</p></div>
+      <div class="item"><h3>Tomato Soup</h3><p>₹100</p></div>
+      <div class="item"><h3>Paneer Tikka</h3><p>₹180</p></div>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h2>Main Course</h2>
+    <div class="menu-items">
+      <div class="item"><h3>Butter Chicken</h3><p>₹250</p></div>
+      <div class="item"><h3>Paneer Butter Masala</h3><p>₹220</p></div>
+      <div class="item"><h3>Veg Biryani</h3><p>₹200</p></div>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h2>Desserts</h2>
+    <div class="menu-items">
+      <div class="item"><h3>Gulab Jamun</h3><p>₹80</p></div>
+      <div class="item"><h3>Chocolate Brownie</h3><p>₹120</p></div>
+      <div class="item"><h3>Ice Cream Sundae</h3><p>₹100</p></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Blog</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body {
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: rgb(63, 62, 62);
+      padding: 60px 10%;
+      background: url("blog\ bg.jpg")no-repeat center/cover;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 { font-size: 40px; color: #4e4d4d; margin-bottom: 10px; }
+    header p { color: #353333; }
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .post {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+    .post:hover { transform: translateY(-10px); box-shadow: 0 0 15px white; }
+    .post img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .post h2 { margin-bottom: 10px; color: #343434; }
+    .post p { color: #414040; font-size: 15px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <p>Sharing my thoughts and experiences</p>
+  </header>
+
+  <section class="blog-container">
+    <div class="post">
+      <img src="file/g1bg.jpg" alt="Post 1">
+      <h2>How I Started Coding</h2>
+      <p>My journey began with curiosity about how websites work. I started learning HTML and CSS and fell in love with frontend development.</p>
+    </div>
+    <div class="post">
+      <img src="file/g2bg.jpg" alt="Post 2">
+      <h2>Tips for Better Productivity</h2>
+      <p>Staying consistent and maintaining focus is key. I use small goals, Pomodoro timers, and a daily checklist to stay productive.</p>
+    </div>
+    <div class="post">
+      <img src="file/g3bg.jpg" alt="Post 3">
+      <h2>Why I Love Frontend</h2>
+      <p>Frontend development lets me blend creativity and logic — designing beautiful, functional interfaces is incredibly rewarding.</p>
+    </div>
+  </section>
+</body>
+</html>

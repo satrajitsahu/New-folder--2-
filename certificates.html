@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* font-family: "Poppins", sans-serif; */
+    }
+    body{
+      background: url("file/certificates bg.jpg") no-repeat center/cover;
+      color: white;
+      padding: 70px 5%;
+    }
+    h1{
+      text-align: center;
+      font-size: 49px;
+      margin-bottom: 40px;
+    }
+    .certificates-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .certificate{
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(15px);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .certificate:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px white;
+    }
+    .certificate img{
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .certificate h2{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .certificate img {
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.4s ease;
+    }
+
+    .certificate:hover img {
+      transform: scale(1.2);
+      cursor: zoom-in;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 70px;
+      text-decoration: none;
+      color: white;
+      background: blue;  
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    a.back-btn:hover {
+      background: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Certificates</h1>
+
+  <div class="certificates-container">
+    <div class="certificate">
+      <img src="file/certificate1.jpeg" alt="Certificate 1">
+      <h2>Diploma in computer Application</h2>
+    </div>
+
+    <div class="certificate">
+      <img src="file/certificate2.jpeg" alt="Certificate 2">
+      <h2>RASCI</h2>
+    </div>
+
+    <div class="certificate">
+      <img src="file/certificate3.jpg" alt="Certificate 3">
+      <h2>Fullstack Web Development</h2>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="Digital Portfolio 2 .html" class="back-btn"><i class="ri-arrow-left-line"></i> Back to Home</a>
+  </div>
+  <div id="certificate-popup">
+  <span onclick="document.getElementById('certificate-popup').style.display='none'">&times;</span>
+  <img id="popup-img" src="" alt="Full Certificate">
+</div>
+</body>
+</html>

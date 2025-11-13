@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"rel="stylesheet" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            /* font-family:"Poppings",sans-serif; */
+        }
+        body{
+            height: 100vh;
+            background: url("/file/bg image1.jpg") no-repeat center/cover;
+            padding: 70px 5%;
+            background-position: center;
+        }
+        .container{
+            position: relative;
+            height: 100%;
+            background: rgba(255,255,255,.1);
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius: 30px;
+            backdrop-filter: blur(30px);
+            transform: scale(0);
+            animation: zoom-in 1s ease forwards;
+        }
+        @keyframes zoom-in{
+            100%{
+                transform: scale(1);
+            }
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .animated{
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 1s ease forwards;
+            animation-delay: 1s;
+        }
+        @keyframes slide-in{
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .logo{
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .navbar a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            border-bottom: 2px solid transparent;
+            transition: .5s;
+        }
+        .navbar a:hover,
+        .navbar a.active
+        {
+            border-color: white;
+        }
+        .home{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            /* justify-content: space-between; */
+            gap: 70px;
+            padding: 130px 10% 0;
+            color: white;
+            display: block;
+            animation-delay: 1.5s;
+        }
+        .home-details h1 {
+            font-size: 55px;
+            line-height: 1;
+        }
+        .home-details h2 {
+            font-size: 32px;
+        }
+        .home-details p{
+            margin: 10px 0 20px;
+            flex: 1;
+            max-width: 70%;
+        }
+        .home-details .download-social{
+            display: flex;
+            align-items: center;
+        }
+        .btn{
+            display: inline-block;
+            padding: 15px 20px;
+            background: white;
+            border: 2px solid white;
+            border-radius: 40px;
+            box-shadow: 0 0 10px white;
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            transition:0.5s;
+        }
+        .btn:hover{
+            background: transparent;
+            box-shadow: none;
+            color: white;
+        }
+        .home-details .social-icons{
+            margin-left: 20px;
+        }
+        .home-details .social-icons a{
+            display: inline-flex;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 50%;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: .5s;
+        }
+        .home-details .social-icons a:hover{
+            background: white;
+            box-shadow: 0 0 10px white;
+            color: black;
+        }
+        .home-img .img-box{
+            position: relative;
+            transform: translateY(-200px);
+            width: 250px;
+            height: 250px;
+            /* height: 300px; */
+            margin: 0px 750px 5%;
+            border: 2px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+        .home-img .img-box img{
+            position: absolute;
+            top: 0px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contact-popup {
+            position: absolute;
+            top: 70px;
+            right: 10%;
+            transform: translateY(30);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 15px 25px;
+            color: rgb(243, 239, 239);
+            font-size: 18px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .navbar a.contact-link:hover ~ .contact-popup {
+            opacity: 1;
+            pointer-events: all;
+        }
+        @media(max-width:900px){
+            .home{
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 150px 5%;
+            }
+            .home-details{
+                max-width: 100%;
+            }
+            .home-img .img-box{
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="animated">
+            <a href="#" class="logo">Portfolio.</a>
+            <nav class ="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="Projects.html">projects</a>
+                <a href="#" class="contact-link">Contact</a>
+            <div class="contact-popup">
+                    <p>+91 81018 99011</p>
+                    <p>satrajitsahu11@email.com</p>
+            </div>
+        </header>
+        <section class="home animated">
+            <div class="home-details">
+            <h1>Satrajit Sahu</h1>
+            <h2>Frontend Developer</h2>
+            <p>Hi, I'm Satrajit Sahu — a passionate learner and aspiring software developer.
+            I enjoy solving problems through code and exploring new technologies.
+            I'm currently focused on my masters degree and improving my C++ and web development skills while building real-world projects.</p>
+            <div class="download-social">
+                <a href="/file/cv.jpg" target="_blank" Download class="btn">Download CV</a>
+                <div class="social-icons">
+                    <a href="https://github.com/satrajitsahu" target="_blank"><i class="ri-github-fill" ></i></a>
+                    <a href="https://www.linkedin.com/in/satrajit-sahu-837344383/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="mailto:satrajitsahu11@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+                    <a href="https://x.com/Satrajit_Sahu" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="home-img">
+                <div class="img-box">
+                    <img src="/file/p" alt="">
+                    </div>
+                </div>
+        </section>
+    </div>
+</section>
+
+</body>
+</html>
